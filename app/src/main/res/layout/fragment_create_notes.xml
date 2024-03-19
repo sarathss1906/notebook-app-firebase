@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.create.CreateNotesFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbCreateNewNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentInsetStart="@dimen/dp_0"
+        android:contentInsetEnd="@dimen/dp_0"
+        app:contentInsetEnd="@dimen/dp_0"
+        app:contentInsetStart="@dimen/dp_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clToolbarMain"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnBackCreateNewNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/ripple_effect"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_back_arrow"
+                android:drawablePadding="@dimen/dp_4"
+                android:drawableTint="@color/default_app_colour"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:text="@string/back"
+                android:textColor="@color/default_app_colour"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/viewDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbCreateNewNote">
+
+        <EditText
+            android:id="@+id/edtNewNotesTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:hint="@string/enter_title"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:maxLength="40"
+            android:textSize="@dimen/sp_26"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textStyle="bold"
+            android:textCursorDrawable="@drawable/ic_cursor"
+            android:layout_marginTop="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/edtNewNotesDescription"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:hint="@string/create_notes_sub_text"
+            android:inputType="textMultiLine"
+            android:maxLength="300"
+            android:maxLines="9"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@drawable/ic_cursor"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/edtNewNotesTitle"
+            app:layout_constraintStart_toStartOf="@+id/edtNewNotesTitle"
+            app:layout_constraintTop_toBottomOf="@+id/edtNewNotesTitle" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerDescription"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/edtNewNotesDescription" />
+
+        <EditText
+            android:id="@+id/edtNewNotesTag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:hint="@string/add_tags"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/ic_cursor"
+            app:layout_constraintEnd_toEndOf="@+id/edtNewNotesTitle"
+            app:layout_constraintStart_toStartOf="@+id/edtNewNotesTitle"
+            app:layout_constraintTop_toBottomOf="@+id/dividerDescription" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="Last Updated on 26/07/2023,05:30 PM"
+            app:layout_constraintStart_toStartOf="@+id/edtNewNotesTag"
+            app:layout_constraintTop_toBottomOf="@+id/edtNewNotesTag" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNoteTags"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="@+id/edtNewNotesTag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:listitem="@layout/list_item_note_tags" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

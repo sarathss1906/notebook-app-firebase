@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "723791499595",
+    "project_id": "notebook-app-1e4d7",
+    "storage_bucket": "notebook-app-1e4d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723791499595:android:e40b24b1fa43ade02c58ce",
+        "android_client_info": {
+          "package_name": "com.example.notebookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723791499595-sp7naoi1iete8ir92r2d4vedaimoehat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEw9pPhwSxfyTL4yKxMFfWYwicfV40h0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723791499595-gi5ro4krscj9dsdjqfadkdb2c7hhvagn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
